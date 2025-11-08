@@ -55,26 +55,8 @@ local servers = {
           url = "",
         },
         schemas = {
-          ["kubernetes"] = {
-            "kubectl-edit-*.yaml",
-            "*Role.yaml",
-            "*RoleBinding.yaml",
-            "*ClusterRole.yaml",
-            "*ClusterRoleBinding.yaml",
-            "*Pod.yaml",
-            "*ReplicaSet.yaml",
-            "*Deployment.yaml",
-            "*Service.yaml",
-            "*ServiceAccount.yaml",
-            "*Namespace.yaml",
-            "*Job.yaml",
-            "*CronJob.yaml",
-            "*ConfigMap.yaml",
-            "*Secret.yaml",
-          },
           ["http://json.schemastore.org/github-workflow"] = ".github/workflows/*",
           ["http://json.schemastore.org/github-action"] = ".github/action.{yml,yaml}",
-          ["http://json.schemastore.org/kustomization"] = "kustomization.{yml,yaml}",
           ["https://gitlab.com/gitlab-org/gitlab/-/raw/master/app/assets/javascripts/editor/schema/ci.json"] = "*.gitlab-ci.{yml,yaml}",
         },
       },
@@ -110,12 +92,6 @@ local servers = {
         compositeLiteralFields = true,
       },
     },
-  },
-
-  pyright = {
-    on_attach = on_attach,
-    on_init = on_init,
-    capabilities = capabilities,
   },
 }
 
