@@ -1,11 +1,6 @@
 local cmp_config = require "configs.cmp"
-return {
-  {
-    "stevearc/conform.nvim",
-    event = "BufWritePre",
-    opts = require "configs.conform",
-  },
 
+return {
   {
     "hrsh7th/nvim-cmp",
     lazy = false,
@@ -29,13 +24,6 @@ return {
     "mfussenegger/nvim-lint",
     optional = true,
     opts = require "configs.lint",
-  },
-
-  {
-    "neovim/nvim-lspconfig",
-    config = function()
-      require "configs.lspconfig"
-    end,
   },
 
   {
